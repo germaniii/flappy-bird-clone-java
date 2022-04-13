@@ -87,7 +87,7 @@ public class GameScreen implements Screen {
         game.batch.end();
 
         if(Gdx.input.justTouched()){
-            bird.y += 3000 * delta;
+            bird.y += 2000 * delta;
             birdSprite.setRotation(30);
         }
 
@@ -98,7 +98,7 @@ public class GameScreen implements Screen {
         if(birdSprite.getRotation() == 90)
             birdSprite.setRotation(90 * delta);
 
-        bird.y -= 250 * delta;
+        bird.y -= 150 * delta;
 
         if(TimeUtils.millis() - lastPipe > 5000)
             spawnPipes();
